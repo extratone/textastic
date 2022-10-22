@@ -1,0 +1,83 @@
+.wy-side-nav-search, .wy-nav-top, .wy-menu-vertical a:active {
+	background-color: #3385CC;
+}
+.rst-content img {
+    height: auto !important;
+}
+
+.wy-nav-top i {
+	padding-top: 9px;
+}
+
+/* make sure permalinks are not wrapped in to the next line, creating a seemingly unnecessary blank line */
+
+.rst-content .code-block-caption .headerlink,
+.rst-content .eqno .headerlink,
+.rst-content .toctree-wrapper>p.caption .headerlink,
+.rst-content dl dt .headerlink,
+.rst-content h1 .headerlink,
+.rst-content h2 .headerlink,
+.rst-content h3 .headerlink,
+.rst-content h4 .headerlink,
+.rst-content h5 .headerlink,
+.rst-content h6 .headerlink,
+.rst-content p.caption .headerlink,
+.rst-content p .headerlink,
+.rst-content table>caption .headerlink {
+    opacity: 0;
+    font-size: 14px;
+    font-family: FontAwesome;
+    margin-left: .5em;
+    margin-right:  -3ch;
+}
+
+
+/* 
+  Use max-width 900px instead of 768px to hide sidebar on 10.5" iPad Pro in portrait orientation 
+  (screen is 834 Pixel wide). Otherwise the readable content width is very narrow. 
+*/
+@media screen and (max-width: 900px) {
+    .wy-body-for-nav {
+        background: #fcfcfc
+    }
+
+    .wy-nav-top {
+        display: block
+    }
+
+    .wy-nav-side {
+        left: -300px
+    }
+
+    .wy-nav-side.shift {
+        width: 85%;
+        left: 0
+    }
+
+    .wy-menu.wy-menu-vertical,
+    .wy-side-nav-search,
+    .wy-side-scroll {
+        width: auto
+    }
+
+    .wy-nav-content-wrap {
+        margin-left: 0
+    }
+
+    .wy-nav-content-wrap .wy-nav-content {
+        padding: 1.618em
+    }
+
+    .wy-nav-content-wrap.shift {
+        position: fixed;
+        min-width: 100%;
+        left: 85%;
+        top: 0;
+        height: 100%;
+        overflow: hidden
+    }
+}
+
+code, .rst-content tt, .rst-content code {
+    white-space: inherit;
+}
